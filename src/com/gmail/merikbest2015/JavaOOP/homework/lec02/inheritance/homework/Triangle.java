@@ -4,28 +4,29 @@ public class Triangle extends Shape {
     private Point pointA;
     private Point pointB;
     private Point pointC;
-    private double abSide;
-    private double bcSide;
-    private double caSide;
 
+    public Triangle() {
+    }
 
-    public Triangle(Point point1, Point point2, Point point3) {
-        this.pointA = point1;
-        this.pointB = point2;
-        this.pointC = point3;
+    public Triangle(Point pointA, Point pointB, Point pointC) {
+        this.pointA = pointA;
+        this.pointB = pointB;
+        this.pointC = pointC;
     }
 
     @Override
-    double getPerimeter() {
-        abSide = Math.sqrt(Math.pow(pointB.getX() - pointA.getX(), 2) + Math.pow(pointB.getY() - pointA.getY(), 2));
-        bcSide = Math.sqrt(Math.pow(pointC.getX() - pointB.getX(), 2) + Math.pow(pointC.getY() - pointB.getY(), 2));
-        caSide = Math.sqrt(Math.pow(pointC.getX() - pointA.getX(), 2) + Math.pow(pointC.getY() - pointA.getY(), 2));
-        return abSide + bcSide + caSide;
+    public double getPerimeter() {
+        return pointA.calcPoint(pointB) + pointB.calcPoint(pointC) + pointC.calcPoint(pointA);
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         double perimetr = getPerimeter() / 2.0;
-        return Math.sqrt(perimetr * ((perimetr - abSide) *(perimetr - bcSide) * (perimetr - caSide)));
+        return Math.sqrt(perimetr * ((perimetr - pointA.calcPoint(pointB)) * (perimetr - pointB.calcPoint(pointC)) *
+                (perimetr - pointC.calcPoint(pointA))));
+    }
+
+    public void getInfo() {
+        System.out.printf("Периметр треугольника = %.3f\n" + "Площадь треугольника = %.3f\n\n", getPerimeter(), getArea());
     }
 }
