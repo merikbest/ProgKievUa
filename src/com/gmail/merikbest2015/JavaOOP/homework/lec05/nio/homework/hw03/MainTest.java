@@ -4,8 +4,10 @@ public class MainTest {
     public static void main(String[] args) {
         Groupe groupe = new Groupe();
         groupe.intercativeAdd();
-        groupe.getAllStudents();
-        groupe.getRecruitList();
+//        groupe.getAllStudents();
+//        groupe.getRecruitList();
+        groupe.addToFile();
+        groupe.readFromFile();
 
 //Иванов Иван 20 2
 //Аванов Иван 24 3

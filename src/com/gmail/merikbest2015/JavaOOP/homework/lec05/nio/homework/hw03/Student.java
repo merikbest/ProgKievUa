@@ -1,6 +1,8 @@
 package com.gmail.merikbest2015.JavaOOP.homework.lec05.nio.homework.hw03;
 
-public class Student extends Human {
+import java.io.Serializable;
+
+public class Student extends Human implements Serializable {
     private int course;
 
     public Student() {
@@ -19,6 +21,10 @@ public class Student extends Human {
     @Override
     public String getLastName() {
         return super.getLastName();
+    }
+
+    public int getCourse() {
+        return course;
     }
 
     @Override

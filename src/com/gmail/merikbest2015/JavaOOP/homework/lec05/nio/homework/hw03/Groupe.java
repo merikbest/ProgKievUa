@@ -1,8 +1,6 @@
 package com.gmail.merikbest2015.JavaOOP.homework.lec05.nio.homework.hw03;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -12,6 +10,30 @@ public class Groupe implements Voenkom {
     private List<Student> students = new ArrayList<Student>(10);
 
     public Groupe() {
+    }
+
+    public void addToFile() {
+        try (FileOutputStream fileOut = new FileOutputStream("C:/Users/Miroslav/IdeaProjects/ProgKievUa/src/students.txt");
+             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);) {
+            for (Student student : students) {
+                objectOut.writeObject(student);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readFromFile() {
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("C:/Users/Miroslav/IdeaProjects/ProgKievUa/src/students.txt"))) {
+            for (Student student : students) {
+                student = (Student) inputStream.readObject();
+                System.out.println(student.getLastName() + " " + student.getFirstName() + " " + student.getAge() + " " + student.getCourse());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void addStudent(Student student) {
