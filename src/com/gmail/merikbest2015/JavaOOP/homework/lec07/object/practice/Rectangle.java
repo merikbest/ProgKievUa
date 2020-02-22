@@ -1,8 +1,9 @@
 package com.gmail.merikbest2015.JavaOOP.homework.lec07.object.practice;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Rectangle {
+public class Rectangle implements Cloneable, Serializable {
     private double lenght;
     private double width;
 
@@ -42,6 +43,11 @@ public class Rectangle {
     protected void finalize() throws Throwable {
         System.out.println("Rectangle destroyed");
         super.finalize();
+    }
+
+    @Override
+    public Rectangle clone() throws CloneNotSupportedException {
+        return (Rectangle) super.clone();
     }
 
     @Override
