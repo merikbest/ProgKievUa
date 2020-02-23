@@ -4,6 +4,7 @@ import java.io.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Enumeration;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,7 +33,6 @@ public class Main {
         }
 
         System.out.println();
-
         Method[] methods = classRectangle.getDeclaredMethods();
         for (Method method : methods) {
             System.out.println(method);
