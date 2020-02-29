@@ -1,13 +1,21 @@
 package com.gmail.merikbest2015.JavaOOP.homework.lec10.network.homework.hw02;
 
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.util.Scanner;
+
 public class Solution {
     public static void main(String[] args) {
-        String nameOS = "os.name";
-        String versionOS = "os.version";
-        String architectureOS = "os.arch";
-
-        System.out.println("Name of the OS: " + System.getProperty(nameOS));
-        System.out.println("Version of the OS: " + System.getProperty(versionOS));
-        System.out.println("Architecture of THe OS: " + System.getProperty(architectureOS));
+        try(Socket socket = new Socket()) {
+            socket.connect(new InetSocketAddress(InetAddress.getLocalHost(), 8189));
+            Scanner scanner = new Scanner(socket.getInputStream());
+            while (scanner.hasNextLine()) {
+                System.out.println(scanner.nextLine());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

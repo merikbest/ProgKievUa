@@ -13,7 +13,7 @@ public class MainURL {
     public static void main(String[] args) {
         String urlAdress = "https://prog.kiev.ua/forum/index.php";
         String text = getStringFromURL(urlAdress);
-//        System.out.println(text);
+        System.out.println(text);
         Map<String,List<String>> result = getHeaderFromURL(urlAdress);
         Set<String> keySet = result.keySet();
         keySet.forEach(key -> System.out.println(key + " - " + result.get(key)));
