@@ -12,5 +12,6 @@
     <orderEntry type="library" name="javax.json:javax.json-api:1.1.4" level="project" />
     <orderEntry type="library" name="gson-2.2.4" level="project" />
     <orderEntry type="library" name="org.glassfish:javax.json:1.1.4" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>

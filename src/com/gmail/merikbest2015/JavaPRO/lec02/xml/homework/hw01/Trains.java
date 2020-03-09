@@ -15,6 +15,10 @@ public class Trains {
         trains.add(train);
     }
 
+    public List<Train> getTrains() {
+        return trains;
+    }
+
     @Override
     public String toString() {
         return Arrays.deepToString(trains.toArray());

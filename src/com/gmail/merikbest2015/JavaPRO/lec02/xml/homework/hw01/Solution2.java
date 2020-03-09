@@ -23,7 +23,13 @@ public class Solution2 {
 
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             trains = (Trains) unmarshaller.unmarshal(file);
-            System.out.println(trains);
+
+            for (Train train: trains.getTrains()) {
+                if(train.getDeparture().startsWith("15")||train.getDeparture().startsWith("16")
+                        ||train.getDeparture().startsWith("17")||train.getDeparture().startsWith("18")){
+                    System.out.println(train);
+                }
+            }
         } catch (JAXBException e) {
             e.printStackTrace();
         }
