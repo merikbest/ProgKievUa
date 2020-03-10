@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProgKievUa.iml" filepath="$PROJECT_DIR$/ProgKievUa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/com/gmail/merikbest2015/JavaPRO/lec03/enterprise/homework/hw01/hw01.iml" filepath="$PROJECT_DIR$/src/com/gmail/merikbest2015/JavaPRO/lec03/enterprise/homework/hw01/hw01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/com/gmail/merikbest2015/JavaPRO/lec03/enterprise/practice/prac02/prac02.iml" filepath="$PROJECT_DIR$/src/com/gmail/merikbest2015/JavaPRO/lec03/enterprise/practice/prac02/prac02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/com/gmail/merikbest2015/JavaPRO/lec03/enterprise/practice/prac03server/prac03server.iml" filepath="$PROJECT_DIR$/src/com/gmail/merikbest2015/JavaPRO/lec03/enterprise/practice/prac03server/prac03server.iml" />
     </modules>
   </component>
 </project>

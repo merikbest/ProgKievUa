@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+		 version="3.1">
+	<servlet>
+		<servlet-name>GetList</servlet-name>
+		<servlet-class>GetListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetList</servlet-name>
+		<url-pattern>/get</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Add</servlet-name>
+		<servlet-class>AddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Add</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
