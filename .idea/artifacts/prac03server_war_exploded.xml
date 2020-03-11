@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="prac03server:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/prac03server_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="prac03server/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="prac03server" />
+        </element>
+      </element>
+      <element id="library" level="project" name="gson-2.2.4" />
+    </root>
+  </artifact>
+</component>
