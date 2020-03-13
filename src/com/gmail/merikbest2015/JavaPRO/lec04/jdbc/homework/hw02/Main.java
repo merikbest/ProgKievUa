@@ -19,8 +19,6 @@ public class Main {
             connection = DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
             dataBase.initDB();
             view();
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
