@@ -9,9 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/../../../../../../../../../../com/gmail/merikbest2015/JavaPRO/lec03/enterprise/practice/prac04/web" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/../../../../../../../../../../com/gmail/merikbest2015/JavaPRO/lec03/enterprise/practice/prac04/src" />
-        </sourceRoots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -23,6 +21,5 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.31" level="application_server_libraries" />
-    <orderEntry type="library" name="jstl:jstl:1.2" level="project" />
   </component>
 </module>
